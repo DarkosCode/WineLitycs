@@ -9,3 +9,6 @@ __pycache__/
 # Archivos del sistema operativo
 .DS_Store
 Thumbs.db
+
+# Plan de trabajo local
+PASOS_PENDIENTES.md

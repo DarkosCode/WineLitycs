@@ -1,8 +1,11 @@
+import os
 import pandas as pd
 from schema.ventas import Ventas
 
 def cargarVentas():
-    dfCsv = pd.read_csv("data/ventas.csv") 
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    ruta_csv = os.path.join(base_dir, "data", "ventas.csv")
+    dfCsv = pd.read_csv(ruta_csv) 
     dfCsv = dfCsv.rename(columns={"Fecha": Ventas.COL_FECHA,
                               "Varietal": Ventas.COL_VARIETAL,
                               "Linea": Ventas.COL_LINEA,
