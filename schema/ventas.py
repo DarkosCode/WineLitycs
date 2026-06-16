@@ -5,3 +5,4 @@ class Ventas:
     COL_CANAL = "Canal de Venta"
     COL_UNIDADESV = "Unidades Vendidas"
     COL_PRECIOU = "Precio Unitario"
+    COL_ESTACION = "Estacion"

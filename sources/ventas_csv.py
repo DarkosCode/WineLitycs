@@ -20,6 +20,17 @@ def cargarVentas():
     dfCsv[Ventas.COL_FECHA] = pd.to_datetime(dfCsv[Ventas.COL_FECHA])
     dfCsv['Mes'] = dfCsv[Ventas.COL_FECHA].dt.month_name()
     
-
+    #? Columna nueva de Estacion (Hemisferio Sur)
+    def obtener_estacion(mes):
+        if mes in [12, 1, 2]:
+            return 'Verano'
+        elif mes in [3, 4, 5]:
+            return 'Otoño'
+        elif mes in [6, 7, 8]:
+            return 'Invierno'
+        else:
+            return 'Primavera'
+            
+    dfCsv[Ventas.COL_ESTACION] = dfCsv[Ventas.COL_FECHA].dt.month.apply(obtener_estacion)
     
     return dfCsv
