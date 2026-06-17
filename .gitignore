@@ -12,3 +12,6 @@ Thumbs.db
 
 # Plan de trabajo local
 PASOS_PENDIENTES.md
+
+# Reportes y gráficos generados
+visuals/*.html
