@@ -5,6 +5,7 @@ from schema.ventas import Ventas
 
 def graficarVentasXCanal(df):
 
+    #?Check de si se crearon los datos o no antes de ejecutar los graficos
     if df is None or df.empty:
         print("El DataFrame está vacío o no existe.")
         return
