@@ -4,14 +4,9 @@ import plotly.express as px
 from schema.inventario import Inventario
 from schema.ventas import Ventas
 
-def graficarPlotlyBurbujas(df):
-    """
-    Genera un gráfico de burbujas interactivo con Plotly para analizar stock vs ventas.
-    Eje X: Unidades Vendidas
-    Eje Y: Stock Actual
-    Tamaño: Ingreso Total
-    Color: Reposición Necesaria (SI/NO)
-    """
+def graficarPlotlyBurbujas(df):    
+    #? gráfico de burbujas interactivo con Plotly para analizar stock vs ventas.
+
     if df is None or df.empty:
         print("El DataFrame consolidado está vacío o no existe.")
         return
@@ -48,6 +43,7 @@ def graficarPlotlyBurbujas(df):
         )
     )
     
+    #? Esta configuracion de color y estilo fue realizada con la IA
     # Estilizado visual premium (Layout limpio, fuentes elegantes y fondo claro)
     fig.update_layout(
         title_font=dict(size=18, family="Arial", color="#2C3E50"),
@@ -76,7 +72,7 @@ def graficarPlotlyBurbujas(df):
         margin=dict(l=50, r=50, t=80, b=50)
     )
     
-    # Definir ruta absoluta para guardar el reporte interactivo HTML
+    # guardar el reporte interactivo HTML definiendo la ruta
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     ruta_html = os.path.join(base_dir, "visuals", "reporte_interactivo.html")
     
