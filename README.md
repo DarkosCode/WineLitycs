@@ -1,6 +1,6 @@
 # WineLitycs - Sistema de Análisis de Bodega
 
-WineLitycs es una herramienta en Python desarrollada para el procesamiento de datos (ETL) y la visualización del rendimiento comercial e inventario de una bodega.
+"WineLitycs" solo es el nombre ficticio del proyecto, el cual es una herramienta desarrollada en Python para el procesamiento de datos (ETL) y la visualización del rendimiento comercial e inventario de una bodega.
 Permite analizar la popularidad de los vinos, la estacionalidad de las ventas, los canales de distribución y alertar sobre la necesidad de reposición de stock.
 
 ## 🛠️ Requisitos Previos
